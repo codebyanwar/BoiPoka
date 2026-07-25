@@ -4,23 +4,24 @@ const Header = () => {
   const links = (
     <>
       <li>
-        <a href="">Home</a>
+        <a className="text-[#131313] py-3 px-5 border border-solid border-transparent text-[14px] rounded-lg" href="">Home</a>
       </li>
       <li>
-        <a href="">About</a>
+        <a className="text-[#131313] py-3 px-5 border border-solid border-transparent text-[14px] rounded-lg" href="">About</a>
       </li>
+
     </>
   );
   return (
     <div className="bg-white">
-      <div className="w-7xl mx-auto">
-        <div className="navbar shadow-sm text-[#131313]">
-          <div className="navbar-start">
+      <div className="lg:w-7xl mx-auto">
+        <div className="navbar text-[#131313]">
+          <div className="navbar-start space-x-2.5">
             <div className="dropdown">
               <div
                 tabIndex={0}
                 role="button"
-                className="btn btn-ghost lg:hidden"
+                className="lg:hidden"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -40,18 +41,19 @@ const Header = () => {
               </div>
               <ul
                 tabIndex="-1"
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow space-y-5"
+                className="menu menu-sm dropdown-content bg-white rounded-box z-1 mt-3 w-52 p-2 shadow space-y-1"
               >
                 {links}
               </ul>
             </div>
-            <a className="text-xl font-bold">Boi Poka</a>
+            <a className="text-[24px] font-bold uppercase">Boi Poka</a>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 space-x-5">{links}</ul>
+            <ul className="menu menu-horizontal px-1 space-x-1.5">{links}</ul>
           </div>
-          <div className="navbar-end">
-            <a className="btn">Button</a>
+          <div className="navbar-end space-x-2.5">
+            <a className="btn bg-[#23BE0A] border-0 text-white shadow-none">Sign In</a>
+            <a className="btn bg-[#59C6D2] border-0 text-white shadow-none">Sign Up</a>
           </div>
         </div>
       </div>
