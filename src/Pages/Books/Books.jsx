@@ -35,7 +35,7 @@ const Books = ({boiData}) => {
                 <h1 className='text-[38px] lg:text-[56px] font-bold text-[#131313] lg:mb-10 mb-6 text-center'>Books</h1>
                 
                 <Suspense fallback={<h3>Loading...</h3>}>
-                    {boiData.map((singleBooks =><Book key={singleBooks.bookId} singleBooks={singleBooks}></Book>))}
+                    {boiData.map((singleBook =><Book key={singleBook.bookId} singleBook={singleBook}></Book>))}
                 </Suspense>
             </div>
         </div>
