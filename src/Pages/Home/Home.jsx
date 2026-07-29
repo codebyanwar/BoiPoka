@@ -7,7 +7,7 @@ const Home = () => {
 
     const boiData = useLoaderData();
 
-    console.log(boiData);
+    // console.log(boiData);
 
     return (
         <div>
