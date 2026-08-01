@@ -32,10 +32,12 @@ const Books = ({boiData}) => {
     return (
         <div className='bg-white'>
             <div className='lg:max-w-7xl mx-auto'>
-                <h1 className='text-[38px] lg:text-[56px] font-bold text-[#131313] lg:mb-10 mb-6 text-center'>Books</h1>
+                <h1 className='text-[38px] lg:text-[56px] font-bold text-[#131313] text-center'>Books</h1>
                 
                 <Suspense fallback={<h3>Loading...</h3>}>
-                    {boiData.map((singleBook =><Book key={singleBook.bookId} singleBook={singleBook}></Book>))}
+                    <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 py-0 lg:py-10 px-0'>
+                        {boiData.map((singleBook) => <Book key={singleBook.bookId} singleBook={singleBook}></Book>)}
+                    </div>
                 </Suspense>
             </div>
         </div>

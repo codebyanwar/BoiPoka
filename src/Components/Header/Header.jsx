@@ -1,15 +1,15 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Header = () => {
   const links = (
     <>
-      <li>
-        <a className="text-[#131313] py-3 px-5 border border-solid border-transparent text-[14px] rounded-lg" href="">Home</a>
-      </li>
-      <li>
-        <a className="text-[#131313] py-3 px-5 border border-solid border-transparent text-[14px] rounded-lg" href="">About</a>
-      </li>
-
+      <Link to="/">
+        <li className="text-[#131313] py-3 px-5 border border-solid border-transparent text-[14px] rounded-lg">Home</li>
+      </Link>
+      <Link to="/about">
+        <li className="text-[#131313] py-3 px-5 border border-solid border-transparent text-[14px] rounded-lg">About</li>
+      </Link>
     </>
   );
   return (
