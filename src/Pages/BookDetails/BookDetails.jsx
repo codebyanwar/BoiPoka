@@ -1,5 +1,7 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import { addToStoredDB } from '../../Utility/addToDB';
+import { addToStoredWishlistDB } from '../../Utility/addToDBInWishlist';
 
 const BookDetails = () => {
 
@@ -9,6 +11,16 @@ const BookDetails = () => {
     const data = useLoaderData();
     const singleBook = data.find(book => book.bookId === bookId);
     const {bookName, author, image, review, totalPages, rating, category, publisher, yearOfPublishing, tags} = singleBook;
+
+
+    const handleMarkAsRead = id => {
+        addToStoredDB(bookId);
+    };
+
+    const handleAddToWishlist = id => {
+        addToStoredWishlistDB(bookId);
+    }
+
 
     return (
         <div className='bg-white'>
@@ -41,8 +53,8 @@ const BookDetails = () => {
                         </div>
                     </div>
                     <div className='space-x-3'>
-                        <button className='border border-[#B8B8B8] text-[#131313] px-5 py-2.5 rounded-lg mt-5 hover:text-white hover:bg-[#50B1C9] hover:border-[#50B1C9] font-semibold'>Read</button>
-                        <button className='bg-[#50B1C9] border border-[#50B1C9] text-white px-5 py-2.5 rounded-lg mt-5 hover:bg-white hover:text-[#50B1C9] font-semibold'>Wishlist</button>
+                        <button onClick={()=>handleMarkAsRead(id)} className='border border-[#B8B8B8] text-[#131313] px-5 py-2.5 rounded-lg mt-5 hover:text-white hover:bg-[#50B1C9] hover:border-[#50B1C9] font-semibold'>Mark As Read</button>
+                        <button onClick={()=>handleAddToWishlist(id)} className='bg-[#50B1C9] border border-[#50B1C9] text-white px-5 py-2.5 rounded-lg mt-5 hover:bg-white hover:text-[#50B1C9] font-semibold'>Add to Wishlist</button>
                     </div>
                 </div>
             </div>
