@@ -29,4 +29,4 @@ const addToStoredWishlistDB = (id)=>{
     }
 }
 
-export {addToStoredWishlistDB};
+export {addToStoredWishlistDB, addToWishlist};

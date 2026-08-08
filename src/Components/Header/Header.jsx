@@ -10,11 +10,8 @@ const Header = () => {
       <Link to="/about">
         <li className="text-[#131313] py-3 px-5 border border-solid border-transparent text-[14px] rounded-lg">About</li>
       </Link>
-      <Link to="/wishlist">
-        <li className="text-[#131313] py-3 px-5 border border-solid border-transparent text-[14px] rounded-lg">Wishlist</li>
-      </Link>
-      <Link to="/readlist">
-        <li className="text-[#131313] py-3 px-5 border border-solid border-transparent text-[14px] rounded-lg">Read List</li>
+      <Link to="/listedbooks">
+        <li className="text-[#131313] py-3 px-5 border border-solid border-transparent text-[14px] rounded-lg">Listed Books</li>
       </Link>
     </>
   );
